@@ -62,9 +62,8 @@
         flex-direction: column; 
         gap: 15px;
         background-color: #ebebeb;
-        padding: 10px 20px;
         position: absolute;
-        left: 0;
+        left: -100vw;
         top: 0;
         width: 100vw;
         height: 100vh;
@@ -76,6 +75,10 @@
     }
 
     .response-nav{
-        transform: translateX(-100%);
+        transform: translateX(100vw);
+    }
+
+    .response-nav .menu-list,.response-nav .icons-nav{
+        padding: 15px;
     }
 }
