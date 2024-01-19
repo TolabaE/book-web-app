@@ -1,11 +1,11 @@
-
+import Carrusel from "../../components/Carrusel/Carrusel";
 
 const Home = () =>{
 
 
     return(
         <>
-            <h1>Hola soy la pagina de inicio</h1>
+            <Carrusel/> 
         </>
     )
 }

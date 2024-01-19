@@ -5,6 +5,7 @@
     justify-content: space-around;
     align-items: center;
     position: relative;
+    z-index: 2;
 }
 
 
@@ -51,7 +52,7 @@
         padding: 15px;
         justify-content: space-between;
     }
-    
+
     .icons-nav{
         display: block;
     }

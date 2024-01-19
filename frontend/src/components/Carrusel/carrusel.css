@@ -1,0 +1,34 @@
+.img-carrusel{
+    width: 100%;
+    height: 75vh;
+}
+
+/* .container-carrusel{
+    background-color: brown;
+} */
+
+@media screen and (min-width:1441px) {
+    .img-carrusel{
+        margin: 0 140px;
+        width: 85%; 
+        height: 80vh;
+    }
+
+    .container-carrusel{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+@media screen and (max-width:1023px) {
+    .img-carrusel{
+        height: 45vh;
+    }
+}
+
+@media screen and (max-width:767px) {
+    .img-carrusel{
+        height: 35vh;
+    }
+}
