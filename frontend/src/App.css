@@ -8,6 +8,21 @@
 
 body{
     box-sizing: border-box;
-    background-color: #efefef;
+    background-color: #fff;
     font-family: "Poppins", sans-serif;
+}
+
+/* estilos para monitores grandes y televisores */
+@media screen and (min-width:1441px) {
+
+}
+
+/* estilos para tablets */
+@media screen and (max-width:1023px) {
+
+}
+
+/* estilos para mobile */
+@media screen and (max-width:767px) {
+
 }

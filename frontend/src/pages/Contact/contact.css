@@ -1,0 +1,72 @@
+.contact__section{
+    text-align: center;
+    color: #1d2f55;
+}
+
+.contact__section > p{
+    background-color: #1d2f55;
+    color: #fff;
+    padding: 4px;
+    letter-spacing: 1px;
+}
+
+.title__contact-section{
+    font-weight: 500;
+    padding: 10px 0;
+    font-size: 32px;
+}
+
+.card__contact-section{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.info__contact-section{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    align-items: flex-start;
+}
+
+.info__contact-section p {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}   
+
+.info__contact-section p > span {
+    font-size: 25px;
+}
+
+.contact-form{
+    display: flex;
+    flex-direction: column;
+    padding: 5px;
+    gap: 10px;
+    width: 30%;
+    border-radius: 6px;
+}
+
+.box-input {
+    display: flex;
+    flex-direction: column;
+}
+
+.box-input >label{
+    text-align: left;
+    font-size: 12px;
+    font-weight: 400;
+}
+.box-input > input {
+    padding:8px;
+}
+
+.submit-form{
+    background-color: #1d2f55;
+    padding: 8px;
+    border: 0;
+    color: #fff;
+    font-size: 16px;
+    border-radius: 15px;
+    padding: 10px;
+}
