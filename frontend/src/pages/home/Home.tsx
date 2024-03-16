@@ -40,7 +40,7 @@ const Home = () =>{
                 <div>
                     <h2 className="title__about-home">¿Quienes somos?</h2>
                     <p>Esta página ha sido creada por estudiantes de medicina que desean vender sus libros, los cuales ya no les son útiles en su carrera. De esta manera, evitamos recurrir a otros sitios donde las comisiones por publicación son muy altas y los envíos suelen demorar.</p>
-                    <button className="home__btn-contact"><Link to='/contacto'>Conocer más</Link></button>
+                    <button className="home__btn-contact"><Link to='/nosotros'>Conocer más</Link></button>
                 </div>
             </div>
         </section>
