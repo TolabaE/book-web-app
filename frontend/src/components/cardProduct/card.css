@@ -1,0 +1,16 @@
+.card__container{
+    background-color: red;
+    width: 250px;
+    height: 250px;
+    padding: 10px;
+    margin: 10px;
+    border-radius: 12px;
+}
+
+.card__container-image{
+    background-color: green;
+}
+
+.card__container-text{
+    background-color: blue;
+}

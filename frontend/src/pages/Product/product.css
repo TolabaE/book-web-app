@@ -1,0 +1,20 @@
+.buttons_filter{
+    display: flex;
+    padding: 10px;
+    background-color: var(--pallet-four-color);
+    justify-content: space-around;
+}
+
+.buttons_filter > li{
+    list-style-type: none;
+}
+
+.router-link-p{
+    text-decoration: none;
+    color: var(--pallet-two-color);
+}
+
+.router-link-p:hover{
+    color: var(--pallet-two-color);
+    border-bottom: 2px solid var(--pallet-two-color);
+}

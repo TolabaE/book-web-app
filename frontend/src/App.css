@@ -26,3 +26,14 @@ body{
 @media screen and (max-width:767px) {
 
 }
+
+
+/* paleta de colores */
+:root {
+    --pallet-one-color:#fa0a0a;
+    --pallet-two-color:#1d2f55;
+    --pallet-three-color:#4a4a4a;
+    --pallet-four-color:#d2d2d2;
+    --pallet-five-color:#1e1e1e;
+    --pallet-six-color:#dc3c02;
+}

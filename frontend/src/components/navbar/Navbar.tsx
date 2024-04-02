@@ -21,7 +21,7 @@ const Navbar = () => {
     return (
         <header className='header'>
             <i onClick={eventResponsive} className='icons-nav'><IoMdMenu className='icons-menu'/></i>
-            <span className='title-nav'><NavLink to='/'>Medicine Books</NavLink></span>
+            <span className='title-nav'><NavLink to='/'>MD Books</NavLink></span>
             <nav className='navbar' ref={navRef}>
                 <i onClick={eventResponsive} className='icons-nav'><MdClose  className='icons-close'/></i>
                 <ul className='menu-list'>
