@@ -17,4 +17,22 @@
 .router-link-p:hover{
     color: var(--pallet-two-color);
     border-bottom: 2px solid var(--pallet-two-color);
+}  
+
+.container__list-cards{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 20px;
+    padding: 50px 30px;
+}
+
+/* estilos para monitores grandes y televisores */
+@media screen and (min-width:1441px) {
+    
+    .container__list-cards{
+        justify-content:center;
+        gap: 30px;
+        padding: 50px 30px;
+    }
 }

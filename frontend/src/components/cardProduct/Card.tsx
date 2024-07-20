@@ -6,14 +6,14 @@ import { Link } from 'react-router-dom';
 const Card = ({precio,img,nombre,id}:productInterface) => {
     return (
         <div className='card__container'>
-            <figure className='card__container-image'>
+            <div className='card__container-image'>
                 <img src={img} alt="imagen del producto"/>
-            </figure>
+            </div>
             <div className='card__container-text'>
-                <h3>$ {precio}</h3>
-                <Link to={`/details/${id}`}>
-                    <p>{nombre}</p>
-                </Link>
+                <h3 className='card__container-title'>{nombre}</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit nobis totam quasi, numquam alias adipisci </p>
+                <h4>Precio $ {precio}</h4>
+                <Link className='card__detail-button' to={`/details/${id}`}>ver detalle</Link>
             </div>
         </div>
     );
