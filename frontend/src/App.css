@@ -10,6 +10,7 @@ body{
     box-sizing: border-box;
     background-color: #fff;
     font-family: "Poppins", sans-serif;
+    font-size: 14px;
 }
 
 /* estilos para monitores grandes y televisores */

@@ -19,6 +19,7 @@
 .card__contact-section{
     display: flex;
     justify-content: space-evenly;
+    padding: 60px 10px;
 }
 
 .info__contact-section{

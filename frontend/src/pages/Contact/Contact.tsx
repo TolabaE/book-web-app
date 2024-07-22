@@ -11,7 +11,7 @@ const Contact = () =>{
     return (
         <section className='contact__section'>
             <p>¡Dejanos tu consulta y seras respondido a la brevedad en horarios de atención al cliente!</p>
-            <h2 className='title__contact-section'>Contacto</h2>
+            <h2 className='title__contact-section'>Contactos</h2>
             <div className='card__contact-section'>
                 <div className='info__contact-section'>
                     <p><span><MdEmail /></span> ejemplo@gmail.com</p>
