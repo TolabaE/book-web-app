@@ -13,7 +13,7 @@ const Card = ({precio,img,nombre,id,detalle}:productInterface) => {
                 <h3 className='card__container-title'>{nombre}</h3>
                 <p>{detalle}</p>
                 <h4>Precio $ {precio}</h4>
-                <Link className='card__detail-button' to={`/details/${id}`}>ver detalle</Link>
+                <Link className='card__detail-button' to={`/detalle/${id}`}>ver detalle</Link>
             </div>
         </div>
     );

@@ -8,21 +8,21 @@ const Product = () => {
         {
             price:2500,
             image:"https://media.istockphoto.com/id/157482029/es/foto/pila-de-libros.jpg?s=612x612&w=0&k=20&c=KYCi5g_Y3D6chjEYCFm7EP3NUKHExrO3jXHrs9ZtV04=",
-            idnumber:4,
+            idnumber:1,
             name:"libros de medicina",
             description:"Lorem ipsum dolor sit, amet consectetur adipisicing elit. Perspiciatis exercitationem rerum earum sed repudiandae mollitia fuga, illum"
         },
         {
             price:2500,
             image:"https://img.freepik.com/foto-gratis/abierto-volando-libros-antiguos_1232-2096.jpg?size=626&ext=jpg&ga=GA1.1.2008272138.1721347200&semt=sph",
-            idnumber:4,
+            idnumber:2,
             name:"libros de medicina",
             description:"Lorem ipsum dolor sit, amet consectetur adipisicing elit. Perspiciatis exercitationem "
         },
         {
             price:2500,
             image:"https://img.freepik.com/fotos-premium/libro-abierto-aislado-sobre-fondo_488220-20235.jpg",
-            idnumber:4,
+            idnumber:3,
             name:"libros de medicina",
             description:"Lorem ipsum dolor sit, amet consectetur adipisicing elit. Perspiciatis exercitationem rerum earum sed repudiandae mollitia fuga,"
         },
@@ -36,11 +36,12 @@ const Product = () => {
         {
             price:2500,
             image:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRQahbGTBx_M9s9EEQsAXplIqeT8ve61TfeaA&s",
-            idnumber:4,
+            idnumber:5,
             name:"libros de medicina",
             description:"Lorem ipsum dolor sit, amet consectetur adipisicing elit. Perspiciatis exercitationem"
         }
-    ]
+    ];
+
     return (
         <section>
             <div className='buttons_filter'>
@@ -53,7 +54,7 @@ const Product = () => {
             <div className='container__list-cards'>
                 {
                     list_books.map(item =>(
-                            <Card 
+                    <Card 
                         precio={item.price}
                         img={item.image}
                         nombre={item.name}

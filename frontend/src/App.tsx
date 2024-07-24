@@ -6,6 +6,7 @@ import Footer from './components/footer/Footer';
 import Contact from './pages/Contact/Contact';
 import About from './pages/About/About';
 import Product from './pages/Product/Product';
+import DetailCard from './components/detailProduct/DetailCard';
 
 
 
@@ -19,6 +20,7 @@ function App() {
           <Route path='/contacto' element={<Contact/>} />
           <Route path='/nosotros' element={<About/>} />
           <Route path='/productos' element={<Product/>} />
+          <Route path='/detalle/:idBook' element={<DetailCard/>} />
         </Routes>
       <Footer/>
     </BrowserRouter>
