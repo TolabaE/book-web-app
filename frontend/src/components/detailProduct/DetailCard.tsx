@@ -19,6 +19,24 @@ const DetailCard = () => {
             stock:3,
             date:"marzo 2002",
             condition:"usado",
+            list_image:[
+                {
+                    link:"https://illustoon.com/photo/2393.png",
+                    alt:"imagen de libros apilados"
+                },
+                {
+                    link:"https://img.freepik.com/vector-gratis/dia-libro-libros-texto_24911-115208.jpg?size=626&ext=jpg",
+                    alt:"imagen de libros apilados"
+                },
+                {
+                    link:"https://static.vecteezy.com/system/resources/previews/001/838/798/non_2x/piled-books-education-supplies-icon-free-vector.jpg",
+                    alt:"imagen de libros apilados"
+                },
+                {
+                    link:"https://img.freepik.com/vector-premium/dibujos-animados-libro_22350-95.jpg",
+                    alt:"imagen de libros apilados"
+                }
+            ],
         },
         {
             price:2500,
@@ -26,9 +44,27 @@ const DetailCard = () => {
             idnumber:2,
             name:"libros de medicina",
             description:"Lorem ipsum dolor sit, amet consectetur adipisicing elit. Perspiciatis exercitationem ",
-            stock:3,
+            stock:7,
             date:"marzo 2002",
             condition:"usado",
+            list_image:[
+                {
+                    link:"https://illustoon.com/photo/2393.png",
+                    alt:"imagen de libros apilados"
+                },
+                {
+                    link:"https://img.freepik.com/vector-gratis/dia-libro-libros-texto_24911-115208.jpg?size=626&ext=jpg",
+                    alt:"imagen de libros apilados"
+                },
+                {
+                    link:"https://static.vecteezy.com/system/resources/previews/001/838/798/non_2x/piled-books-education-supplies-icon-free-vector.jpg",
+                    alt:"imagen de libros apilados"
+                },
+                {
+                    link:"https://img.freepik.com/vector-premium/dibujos-animados-libro_22350-95.jpg",
+                    alt:"imagen de libros apilados"
+                }
+            ],
         },
         {
             price:2500,
@@ -36,9 +72,27 @@ const DetailCard = () => {
             idnumber:3,
             name:"libros de medicina",
             description:"Lorem ipsum dolor sit, amet consectetur adipisicing elit. Perspiciatis exercitationem rerum earum sed repudiandae mollitia fuga,",
-            stock:3,
+            stock:2,
             date:"marzo 2002",
             condition:"usado",
+            list_image:[
+                {
+                    link:"https://illustoon.com/photo/2393.png",
+                    alt:"imagen de libros apilados"
+                },
+                {
+                    link:"https://img.freepik.com/vector-gratis/dia-libro-libros-texto_24911-115208.jpg?size=626&ext=jpg",
+                    alt:"imagen de libros apilados"
+                },
+                {
+                    link:"https://static.vecteezy.com/system/resources/previews/001/838/798/non_2x/piled-books-education-supplies-icon-free-vector.jpg",
+                    alt:"imagen de libros apilados"
+                },
+                {
+                    link:"https://img.freepik.com/vector-premium/dibujos-animados-libro_22350-95.jpg",
+                    alt:"imagen de libros apilados"
+                }
+            ]
         },
         {
             price:2500,
@@ -46,9 +100,27 @@ const DetailCard = () => {
             idnumber:4,
             name:"libros de medicina",
             description:"Lorem ipsum dolor sit, amet consectetur adipisicing elit. Perspiciatis exercitationem?",
-            stock:3,
+            stock:1,
             date:"marzo 2002",
             condition:"usado",
+            list_image:[
+                {
+                    link:"https://illustoon.com/photo/2393.png",
+                    alt:"imagen de libros apilados"
+                },
+                {
+                    link:"https://img.freepik.com/vector-gratis/dia-libro-libros-texto_24911-115208.jpg?size=626&ext=jpg",
+                    alt:"imagen de libros apilados"
+                },
+                {
+                    link:"https://static.vecteezy.com/system/resources/previews/001/838/798/non_2x/piled-books-education-supplies-icon-free-vector.jpg",
+                    alt:"imagen de libros apilados"
+                },
+                {
+                    link:"https://img.freepik.com/vector-premium/dibujos-animados-libro_22350-95.jpg",
+                    alt:"imagen de libros apilados"
+                }
+            ],
         },
         {
             price:2500,
@@ -56,9 +128,27 @@ const DetailCard = () => {
             idnumber:5,
             name:"libros de medicina",
             description:"Lorem ipsum dolor sit, amet consectetur adipisicing elit. Perspiciatis exercitationem",
-            stock:3,
+            stock:2,
             date:"marzo 2002",
             condition:"usado",
+            list_image:[
+                {
+                    link:"https://illustoon.com/photo/2393.png",
+                    alt:"imagen de libros apilados"
+                },
+                {
+                    link:"https://img.freepik.com/vector-gratis/dia-libro-libros-texto_24911-115208.jpg?size=626&ext=jpg",
+                    alt:"imagen de libros apilados"
+                },
+                {
+                    link:"https://static.vecteezy.com/system/resources/previews/001/838/798/non_2x/piled-books-education-supplies-icon-free-vector.jpg",
+                    alt:"imagen de libros apilados"
+                },
+                {
+                    link:"https://img.freepik.com/vector-premium/dibujos-animados-libro_22350-95.jpg",
+                    alt:"imagen de libros apilados"
+                }
+            ],
         }
     ];
 
@@ -79,8 +169,6 @@ const DetailCard = () => {
             
     //     },
     // }
-    console.log(idBook);
-    // Asegúrate de que idBook está definido y es una cadena
 
     if (!idBook) {
         return <div>Invalid book ID</div>;
@@ -102,20 +190,24 @@ const DetailCard = () => {
     return (
         <section className='card__detail-container'>
             <div className='card__detail-images'>
-                aqui van a ir las imagenes
+                {
+                    book.list_image.map(object =>(
+                        <img src={object.link} alt={object.alt} className='children__image' />
+                    ))
+                }
             </div>
             <div className='card__detail-img'>
-                aqui va a ir la imagen grande 
+                <img src={book.image} alt="foto del libro" />
             </div>
             <div className='card__detail'>
                 {
                     <div className='card__detail-info'>
+                    <h2>{book.name}</h2>
                     <h3>{book.description}</h3>
-                    <h4>{book.image}</h4>
                     <p>Autor: {book.condition}</p>
                     <b>Precio: ${book.price}</b>
                     <p>Stock disponibles</p>
-                    <p>Cantidad: <b>{book.stock}</b></p>
+                    {book.stock == 1 ? <p>Ultima unidad</p>: <p>Cantidad:{book.stock}  </p>}
                     <h6>Publicado: {book.date}</h6>
                 </div>
                 }

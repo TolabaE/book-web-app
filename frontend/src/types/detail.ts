@@ -8,6 +8,11 @@ export interface detailInterface{
     fecha:string,
 }
 
+type objImg = {
+    link:string,
+    alt:string
+}
+
 export interface objectInterface{
     price:number,
     image:string,
@@ -17,6 +22,7 @@ export interface objectInterface{
     stock:number,
     date:string,
     condition:string,
+    list_image:Array<objImg>
 }
 
 export interface sumarCantidad {
