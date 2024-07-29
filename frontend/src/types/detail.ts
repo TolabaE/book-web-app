@@ -10,12 +10,13 @@ export interface detailInterface{
 
 type objImg = {
     link:string,
-    alt:string
+    alt:string,
+    position:number
 }
 
 export interface objectInterface{
     price:number,
-    image:string,
+    mainImage:string,
     idnumber:number,
     name:string,
     description:string,
@@ -35,4 +36,8 @@ export interface eliminarCantidad {
 
 export interface agregarCarrito{
     guardar:()=> void
+}
+
+export interface actualizarImagen{
+    actualizar:(position:number)=> void
 }
