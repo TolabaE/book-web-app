@@ -41,3 +41,7 @@ export interface agregarCarrito{
 export interface actualizarImagen{
     actualizar:(position:number)=> void
 }
+
+export interface botonActivo{
+    activar:()=>void
+}

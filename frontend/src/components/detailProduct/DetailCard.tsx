@@ -1,13 +1,22 @@
 import './detail.css';
 import { useParams } from 'react-router-dom';
-import { objectInterface,actualizarImagen } from '../../types/detail';
+import { objectInterface,actualizarImagen, botonActivo } from '../../types/detail';
 import {useState } from 'react';
 
 
 const DetailCard = () => {
 
     const { idBook } = useParams<{ idBook: string }>();
-    
+    const [imagen, setImagen] = useState<string | undefined>(undefined);
+    const [btnSelect, setbtnSelect] = useState<boolean>(false);
+
+    const handleClickSelect:botonActivo ={
+        activar() {
+            setbtnSelect(true)
+            console.log('hola');
+        },
+    }
+
     const list_books:objectInterface[] = [
         {
             price:2500,
@@ -38,6 +47,11 @@ const DetailCard = () => {
                     link:"https://img.freepik.com/vector-premium/dibujos-animados-libro_22350-95.jpg",
                     alt:"imagen de libros apilados",
                     position:4
+                },
+                {
+                    link:"https://cdn5.dibujos.net/dibujos/pintados/202009/pila-de-libros-colegio-11713953.jpg",
+                    alt:"imagen de libros apilados",
+                    position:5
                 }
             ],
         },
@@ -102,6 +116,11 @@ const DetailCard = () => {
                     link:"https://img.freepik.com/vector-premium/dibujos-animados-libro_22350-95.jpg",
                     alt:"imagen de libros apilados",
                     position:4
+                },
+                {
+                    link:"https://cdn5.dibujos.net/dibujos/pintados/202009/pila-de-libros-colegio-11713953.jpg",
+                    alt:"imagen de libros apilados",
+                    position:5
                 }
             ]
         },
@@ -134,6 +153,11 @@ const DetailCard = () => {
                     link:"https://img.freepik.com/vector-premium/dibujos-animados-libro_22350-95.jpg",
                     alt:"imagen de libros apilados",
                     position:4
+                },
+                {
+                    link:"https://cdn5.dibujos.net/dibujos/pintados/202009/pila-de-libros-colegio-11713953.jpg",
+                    alt:"imagen de libros apilados",
+                    position:5
                 }
             ],
         },
@@ -171,8 +195,6 @@ const DetailCard = () => {
         }
     ];
 
-
-    const [imagen, setImagen] = useState<string | undefined>(undefined);
     if (!idBook) return <div>no se encuentro nunguna imagen</div>;
 
     const idBookNumber = parseInt(idBook);
@@ -209,7 +231,7 @@ const DetailCard = () => {
             <div className='card__detail-images'>
                 {
                     book.list_image.map(object => (
-                        <div className='btn__children-image' onClick={() => updateImage.actualizar(object.position)} key={object.position}>
+                        <div className={`btn__children-image ${btnSelect ? 'btn_activo': ''}`} onClick={() => {updateImage.actualizar(object.position),handleClickSelect.activar()}} key={object.position}>
                             <img src={object.link} alt={object.alt} className='children__image' />
                         </div>
                     ))
@@ -221,14 +243,14 @@ const DetailCard = () => {
             <div className='card__detail'>
                 {
                     <div className='card__detail-info'>
-                    <h2>{book.name}</h2>
-                    <h3>{book.description}</h3>
-                    <p>Autor: {book.condition}</p>
-                    <b>Precio: ${book.price}</b>
-                    <p>Stock disponibles</p>
-                    {book.stock == 1 ? <p>Ultima unidad</p>: <p>Cantidad:{book.stock}  </p>}
-                    <h6>Publicado: {book.date}</h6>
-                </div>
+                        <h2>{book.name}</h2>
+                        <h3>{book.description}</h3>
+                        <p className='p-author'>Autor: {book.condition}</p>
+                        <p className='p-price'>Precio: ${book.price}</p>
+                        <p className='p-stock'>Stock disponibles</p>
+                        {book.stock == 1 ? <p>Ultima unidad</p>: <p>Cantidad: {book.stock}</p>}
+                        <h5>Publicado: {book.date}</h5>
+                    </div>
                 }
                 <div className='card__detail-add'>            
                     {/* <button onClick={deleteBook}>Restar</button>
@@ -244,5 +266,3 @@ const DetailCard = () => {
 }
 
 export default DetailCard;
-
-
