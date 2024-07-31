@@ -18,7 +18,7 @@
 }
 
 .btn__children-image{
-    border: 1px solid var(--pallet-two-color);
+    /* border: 1px solid var(--pallet-two-color); */
     cursor: pointer;
     width: 80px;
     height: 80px;
@@ -28,9 +28,9 @@
     box-shadow: 0px 0px 4px 1px var(--pallet-three-color);
 }
 
-/* .btn_activo{
-    box-shadow: 0px 0px 4px 1px var(--pallet-three-color);
-} */
+.btn_activo{
+    box-shadow: 0px 0px 4px 2px var(--pallet-two-color);
+}
 
 .children__image{
     width: 100%;
@@ -71,7 +71,6 @@
     color: var(--pallet-six-color);
 }
 
-
 .card__detail-info h3{
     font-size: 18px;
     font-weight: 500;
@@ -85,6 +84,25 @@
 
 .p-stock, .p-author{
     font-size: 18px;
+}
+.card__detail-add{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.add__cart-btn{
+    text-align: center;
+    background-color: var(--pallet-six-color);
+    padding: 6px;
+    margin: 10px;
+    border-radius: 5px;
+    color: #fff;
+    font-size: 16px;
+    font-weight: 500;
+    cursor: pointer;
+    text-transform: uppercase;
+    box-shadow: 0 0 8px 0 var(--pallet-five-color);
 }
 
 /* estilos para monitores grandes y televisores */

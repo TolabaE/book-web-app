@@ -8,12 +8,11 @@ const DetailCard = () => {
 
     const { idBook } = useParams<{ idBook: string }>();
     const [imagen, setImagen] = useState<string | undefined>(undefined);
-    const [btnSelect, setbtnSelect] = useState<boolean>(false);
+    const [btnSelect, setbtnSelect] = useState<number>(1);//por defecto la imagen que estar activa es la primera,que seria la foto principal
 
     const handleClickSelect:botonActivo ={
-        activar() {
-            setbtnSelect(true)
-            console.log('hola');
+        activar(nivel) {
+            setbtnSelect(nivel)
         },
     }
 
@@ -196,7 +195,6 @@ const DetailCard = () => {
     ];
 
     if (!idBook) return <div>no se encuentro nunguna imagen</div>;
-
     const idBookNumber = parseInt(idBook);
 
     if (isNaN(idBookNumber)) {
@@ -231,7 +229,9 @@ const DetailCard = () => {
             <div className='card__detail-images'>
                 {
                     book.list_image.map(object => (
-                        <div className={`btn__children-image ${btnSelect ? 'btn_activo': ''}`} onClick={() => {updateImage.actualizar(object.position),handleClickSelect.activar()}} key={object.position}>
+                        <div className={`btn__children-image ${object.position === btnSelect ? 'btn_activo': ''}`} 
+                            onClick={() => {updateImage.actualizar(object.position),handleClickSelect.activar(object.position)}} 
+                            key={object.position}>
                             <img src={object.link} alt={object.alt} className='children__image' />
                         </div>
                     ))
@@ -253,12 +253,18 @@ const DetailCard = () => {
                     </div>
                 }
                 <div className='card__detail-add'>            
-                    {/* <button onClick={deleteBook}>Restar</button>
-                    <b>cantidad: {unidad} </b>
-                    <button onClick={addBook}>Sumar</button>
-                    <div onClick={saveBook}>
+                    {
+                        book.stock > 1 
+                        ?
+                        <span>
+                            <button >Restar</button>
+                            <b>1</b>
+                            <button>Sumar</button>
+                        </span>: <> </>
+                    }
+                    <div className='add__cart-btn'>
                         Agregar al carrito
-                    </div> */}
+                    </div>
                 </div>
             </div>
         </section>

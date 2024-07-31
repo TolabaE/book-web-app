@@ -43,5 +43,5 @@ export interface actualizarImagen{
 }
 
 export interface botonActivo{
-    activar:()=>void
+    activar:(posicion:number)=>void
 }
