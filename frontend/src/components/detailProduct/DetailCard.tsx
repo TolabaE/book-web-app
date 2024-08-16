@@ -1,14 +1,20 @@
 import './detail.css';
 import { useParams } from 'react-router-dom';
-import { objectInterface,actualizarImagen, botonActivo } from '../../types/detail';
-import {useState } from 'react';
-
+import { objectInterface,actualizarImagen, botonActivo,eliminarCantidad,sumarCantidad } from '../../types/detail';
+import {useState } from 'react';    
+import { IoRemove } from "react-icons/io5";
+import { IoAdd } from "react-icons/io5";
 
 const DetailCard = () => {
 
     const { idBook } = useParams<{ idBook: string }>();
     const [imagen, setImagen] = useState<string | undefined>(undefined);
     const [btnSelect, setbtnSelect] = useState<number>(1);//por defecto la imagen que estar activa es la primera,que seria la foto principal
+    const [count,setCount] = useState<number>(1);
+
+
+
+
 
     const handleClickSelect:botonActivo ={
         activar(nivel) {
@@ -219,6 +225,22 @@ const DetailCard = () => {
         },
     }
 
+    const addBook:sumarCantidad = {
+        agregar() {
+            if (book.stock > count) {
+                setCount(count + 1)
+            }
+        }
+    }
+
+    const deleteBook:eliminarCantidad = {
+        eliminar() {
+            if (count > 1) {
+                setCount(count - 1)
+            }
+        },
+    }
+
     // useEffect(() => {
         
         
@@ -256,14 +278,14 @@ const DetailCard = () => {
                     {
                         book.stock > 1 
                         ?
-                        <span>
-                            <button >Restar</button>
-                            <b>1</b>
-                            <button>Sumar</button>
+                        <span className='cart__buttons-box'>
+                            <button className='add-btn' onClick={deleteBook.eliminar}><IoRemove /></button>
+                            <b className='number-count'>{count}</b>
+                            <button className='remove-btn' onClick={addBook.agregar}><IoAdd /></button>
                         </span>: <> </>
                     }
                     <div className='add__cart-btn'>
-                        Agregar al carrito
+                        Agregar al carrito 
                     </div>
                 </div>
             </div>
