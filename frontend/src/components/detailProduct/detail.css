@@ -53,6 +53,11 @@
     width: 100%;
     height: 100%;
 }
+/* 
+.card__detail-img img:hover{
+    border: 2px solid var(--pallet-one-color);
+} */
+
 .card__detail{
     padding: 10px;
     width: 350px;
